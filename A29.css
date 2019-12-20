@@ -1,0 +1,62 @@
+.col-auto {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  /* Black background with 0.5 opacity */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.col-auto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #f1f1f1;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img:hover, .user-img-list:hover, li.billboardList:hover, #view-type-icon:hover i, #home {
+  cursor: pointer;
+}
+
+.user-img-list:hover {
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.user-img-list *, #pagination span, .billboardList * {
+  /* prevent all pointer(mouse) events */
+  pointer-events: none;
+}
+
+.click-avatar-hint {
+  animation-name: avatarAnimation;
+  /* 動畫要持續 0.2 秒 */
+  animation-duration: 0.2s;
+  /* 動畫要重覆 3 次 */
+  animation-iteration-count: 3;
+}
+@keyframes avatarAnimation {
+  to {
+    border: 5px solid #ffd54f;
+  }
+}
